@@ -11,63 +11,36 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            min-height: 100vh;
             margin: 0;
             font-family: Arial, sans-serif;
-        }
-        .container {
-            text-align: center;
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
         h1 {
             color: #333;
         }
         .banner {
-            margin-top: 20px;
-            padding: 10px;
-            background: #f9f9f9;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            width: 320px; /* Adjust to banner size */
-            height: 280px; /* Adjust to banner size */
+            margin: 20px 0;
+            text-align: center;
         }
-        canvas {
-            display: block;
+        iframe {
+            width: 300px;
+            height: 250px;
+            border: none;
+            background: white;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>BannerStage</h1>
-        <p>Preview of HTML5 Banners</p>
-        
-        <div class="banner">
-            <h2>Moosewear Antlers 3x6</h2>
-            <div id="banner1"></div>
-        </div>
-        
-        <div class="banner">
-            <h2>Moosewear Antlers 9x2</h2>
-            <div id="banner2"></div>
-        </div>
+    <h1>BannerStage</h1>
+    
+    <div class="banner">
+        <h2>Moosewear Antlers 3x6</h2>
+        <iframe src="moosewear-antlers-3x6.html"></iframe>
     </div>
     
-    <!-- Load HTML5 Banners Scripts -->
-    <script src="moosewear-antlers-3x6.js"></script>
-    <script>
-        var canvas1 = document.createElement("canvas");
-        document.getElementById("banner1").appendChild(canvas1);
-        initMoosewearAntlers3x6(canvas1); // Call the banner function
-    </script>
-    
-    <script src="moosewear-antlers-9x2.js"></script>
-    <script>
-        var canvas2 = document.createElement("canvas");
-        document.getElementById("banner2").appendChild(canvas2);
-        initMoosewearAntlers9x2(canvas2); // Call the banner function
-    </script>
+    <div class="banner">
+        <h2>Moosewear Antlers 9x2</h2>
+        <iframe src="moosewear-antlers-9x2.html"></iframe>
+    </div>
 </body>
 </html>
