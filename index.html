@@ -31,10 +31,11 @@
             background: #f9f9f9;
             border-radius: 8px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            width: 320px; /* Adjust to banner size */
+            height: 280px; /* Adjust to banner size */
         }
-        iframe {
-            border: none;
-            margin-top: 10px;
+        canvas {
+            display: block;
         }
     </style>
 </head>
@@ -45,13 +46,28 @@
         
         <div class="banner">
             <h2>Moosewear Antlers 3x6</h2>
-            <iframe src="moosewear-antlers-3x6.html" width="300" height="250"></iframe>
+            <div id="banner1"></div>
         </div>
         
         <div class="banner">
             <h2>Moosewear Antlers 9x2</h2>
-            <iframe src="moosewear-antlers-9x2.html" width="300" height="250"></iframe>
+            <div id="banner2"></div>
         </div>
     </div>
+    
+    <!-- Load HTML5 Banners Scripts -->
+    <script src="moosewear-antlers-3x6.js"></script>
+    <script>
+        var canvas1 = document.createElement("canvas");
+        document.getElementById("banner1").appendChild(canvas1);
+        initMoosewearAntlers3x6(canvas1); // Call the banner function
+    </script>
+    
+    <script src="moosewear-antlers-9x2.js"></script>
+    <script>
+        var canvas2 = document.createElement("canvas");
+        document.getElementById("banner2").appendChild(canvas2);
+        initMoosewearAntlers9x2(canvas2); // Call the banner function
+    </script>
 </body>
 </html>
